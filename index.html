@@ -511,8 +511,10 @@ function calc(){
   document.getElementById('b-after').textContent=fmt(afterWeekly)+' / wk';
   document.getElementById('b-net').textContent=fmt(savedWeekly)+' / wk';
 
-  var yrK=Math.round(yearly/1000);
-  document.getElementById('cta-headline').textContent='Your team could reclaim $'+yrK+'K this year.';
+  var yrLabel;
+  if(yearly>=1000000){yrLabel='$'+(yearly/1000000).toFixed(2).replace(/\.?0+$/,'')+' million';}
+  else{yrLabel='$'+Math.round(yearly/1000)+'K';}
+  document.getElementById('cta-headline').textContent='Your team could reclaim '+yrLabel+' this year.';
 }
 ['eng','tickets','rate','hours'].forEach(function(id){
   document.getElementById(id).addEventListener('input',calc);
