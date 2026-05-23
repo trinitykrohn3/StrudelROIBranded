@@ -369,7 +369,7 @@ footer a:hover{text-decoration:underline}
   <div class="hero-inner">
     <span class="hero-badge">ROI Calculator</span>
     <h1>How much is slow triage costing your team?</h1>
-    <p>Adjust the sliders to see your real numbers - then see what Strudel gives back.</p>
+    <p>Adjust the sliders to see your real numbers — then see what Strudel gives back.</p>
   </div>
 </div>
 
@@ -441,7 +441,7 @@ footer a:hover{text-decoration:underline}
       </div>
       <div class="breakdown-row">
         <span>Strudel triage time reduction</span>
-        <span>75%</span>
+        <span>65%</span>
       </div>
       <div class="breakdown-row">
         <span>Weekly cost after Strudel</span>
@@ -455,14 +455,14 @@ footer a:hover{text-decoration:underline}
 
     <div class="note">
       <div class="note-icon"></div>
-      <p>Based on Strudel customer data: 95% reduction in mean triage time, 15 hrs/week reclaimed per engineer. Calculator uses a conservative 75% to account for ramp-up.</p>
+      <p>Based on Strudel customer data: 95% reduction in mean triage time, 15 hrs/week reclaimed per engineer. Calculator uses a conservative 65% to account for ramp-up.</p>
     </div>
   </div>
 
   <div class="cta-block">
     <div class="cta-left">
       <p id="cta-headline">See these savings on your team.</p>
-      <p>Book a 20-minute demo. No pitch, just the product.</p>
+      <p>Book a 20-minute demo — no pitch, just the product.</p>
     </div>
     <a class="cta-btn" href="https://strudel.io/demo/" target="_blank">Book a demo →</a>
   </div>
@@ -498,9 +498,9 @@ function calc(){
   document.getElementById('hours-out').textContent=hours.toFixed(1)+' hrs';
 
   var currentWeekly=tickets*hours*rate;
-  var savedWeekly=currentWeekly*0.75;
-  var afterWeekly=currentWeekly*0.25;
-  var hrsWeekly=tickets*hours*0.75;
+  var savedWeekly=currentWeekly*0.65;
+  var afterWeekly=currentWeekly*0.35;
+  var hrsWeekly=tickets*hours*0.65;
   var monthly=savedWeekly*4.33;
   var yearly=savedWeekly*52;
 
